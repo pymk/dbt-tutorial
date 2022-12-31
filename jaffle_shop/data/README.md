@@ -4,6 +4,10 @@ The [current dbt tutorial uses BigQuery](https://docs.getdbt.com/docs/get-starte
 
 So this is the guide to help set up the same `jaffle_shop` database using Postgres.
 
+Note: Ensure you are in the project directory (i.e. `~/../dbt-tutorial/jaffle_shop`).
+
+---
+
 First, install [Postgres app](https://postgresapp.com).
 
 In terminal, login to Postgres as sudo:
