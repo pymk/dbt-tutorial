@@ -69,3 +69,23 @@ SELECT * FROM payments ORDER BY id ASC LIMIT 10;
 ```
 
 And that's it. We can quit at anytime with `\q`.
+
+---
+
+The configuration for `~/.dbt/profiles.yml` looks like this:
+
+```yaml
+jaffle_shop:
+  outputs:    
+    dev:
+        type: postgres
+        threads: 4
+        host: localhost
+        port: 5432
+        user: dbt_test
+        pass: dbt_test
+        dbname: jaffle_shop
+        schema: public
+  
+  target: dev
+```
