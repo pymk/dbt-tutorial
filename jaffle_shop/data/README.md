@@ -53,11 +53,20 @@ We can run `\dt` again to see a list of newly created tables.
 Now we can copy the content of the CSV files into these tables:
 
 ```sql
-\copy customers(id,first_name,last_name,email) FROM './data/raw_customers.csv' WITH DELIMITER ',' CSV header;
+\COPY customers(id,first_name,last_name,email) 
+FROM './data/raw_customers.csv'
+WITH DELIMITER ','
+CSV HEADER;
 
-\copy orders(id,user_id,order_date,status) FROM './data/raw_orders.csv' WITH DELIMITER ',' CSV header;
+\COPY orders(id,user_id,order_date,status)
+FROM './data/raw_orders.csv'
+WITH DELIMITER ','
+CSV HEADER;
 
-\copy payments(id,order_id,payment_method,amount) FROM './data/raw_payments.csv' WITH DELIMITER ',' CSV header;
+\COPY payments(id,order_id,payment_method,amount)
+FROM './data/raw_payments.csv'
+WITH DELIMITER ','
+CSV HEADER;
 ```
 
 And a quick sanity check to ensure we have the data:
